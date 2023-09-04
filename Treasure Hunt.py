@@ -1,4 +1,5 @@
 import random
+import time
 
 def create_grid():
     grid = []
@@ -29,6 +30,8 @@ def get_pos(location_y, location_x, prompt):
 while True:
     grid = create_grid()
 
+    start_time = time.time()
+
     for treasure in range(3):
         grid[random.randint(0,11)][random.randint(0,11)] = "$"
 
@@ -40,7 +43,8 @@ while True:
         steps += 1
 
         if grid[location_y][location_x] == "$":
-           print("Congratulations! You won the treasure. It took you", steps, "steps to reach it!\n")
+           end_time = time.time()
+           print(f"Congratulations! You won the treasure. It took you {steps} steps and {end_time-start_time} seconds to reach it!\n")
            break
 
         grid[location_y][location_x] = "P"
