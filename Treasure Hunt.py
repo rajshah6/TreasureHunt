@@ -48,7 +48,7 @@ while True:
            print(f"Congratulations! You won the treasure. It took you {steps} step(s) and {time} seconds to reach it!\n")
            break
 
-        grid[location_y][location_x] = "👤"
+        grid[location_y][location_x] = "P"
         display_grid(grid)
 
         grid[location_y][location_x] = "."
