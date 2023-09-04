@@ -59,6 +59,3 @@ while True:
     if play_again != "y":
         print("Thanks for playing!")
         break
-
-
-    
